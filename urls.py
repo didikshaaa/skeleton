@@ -13,15 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.urls import include, path
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^grappelli/', include('grappelli.urls')),  # grappelli URLS
-    url(r'^admin/', admin.site.urls),
+    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
+    path('admin/', admin.site.urls),
 ]
 
 # Change to whatever you like
-admin.site.site_title = '{{ project_name }} Administration'
-admin.site.index_title = '{{ project_name }} Administration'
-admin.site.site_header = '{{ project_name }} Administration'
+admin.site.site_title = 'Administration'
+admin.site.index_title = 'Administration'
+admin.site.site_header = 'Administration'

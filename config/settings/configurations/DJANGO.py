@@ -92,6 +92,7 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+STATIC_ROOT = BASE_DIR('staticfiles')
 # '' if not in os.environ
 EMAIL_HOST = ENV_VAR('EMAIL_HOST', default='')
 EMAIL_PORT = 587
